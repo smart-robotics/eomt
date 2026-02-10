@@ -357,7 +357,7 @@ environments:
       - conda: https://prefix.dev/conda-forge/linux-64/zstd-1.5.7-hb78ec9c_6.conda
       - pypi: https://files.pythonhosted.org/packages/55/e2/2537ebcff11c1ee1ff17d8d0b6f4db75873e3b0fb32c2d4a2ee31ecb310a/docstring_parser-0.17.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a4/ed/1f1afb2e9e7f38a545d628f864d562a5ae64fe6f7a10e28ffb9b185b4e89/importlib_resources-6.5.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/c0/6d/55e0db968193fcb12a3b4a9d823f6f9c8a39df1e28345daa3772b61f4389/jsonargparse-4.46.0-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/f5/24/d3b1f6c22407c17a66e37d97cef61900d36595108c234aa18f5ac6a5828e/jsonargparse-4.38.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/11/db/e7474719e90062df673057e865f94f67da2d0b4f671d8051020c74962c77/typeshed_client-2.8.2-py3-none-any.whl
 packages:
 - conda: https://prefix.dev/conda-forge/linux-64/_openmp_mutex-4.5-7_kmp_llvm.conda
@@ -1788,10 +1788,10 @@ packages:
   - pkg:pypi/jinja2?source=compressed-mapping
   size: 120685
   timestamp: 1764517220861
-- pypi: https://files.pythonhosted.org/packages/c0/6d/55e0db968193fcb12a3b4a9d823f6f9c8a39df1e28345daa3772b61f4389/jsonargparse-4.46.0-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/f5/24/d3b1f6c22407c17a66e37d97cef61900d36595108c234aa18f5ac6a5828e/jsonargparse-4.38.0-py3-none-any.whl
   name: jsonargparse
-  version: 4.46.0
-  sha256: 1f218fc2af1190c6425860e40af2003c8ca1f59e10d656fc67bbc32380a25ec3
+  version: 4.38.0
+  sha256: 6e0567f40db3dd71621d74909613f3fc29d3d8732db7785a83bb70123f994501
   requires_dist:
   - pyyaml>=3.13
   - jsonargparse[signatures] ; extra == 'all'
@@ -1800,22 +1800,23 @@ packages:
   - jsonargparse[toml] ; extra == 'all'
   - jsonargparse[urls] ; extra == 'all'
   - jsonargparse[fsspec] ; extra == 'all'
-  - jsonargparse[ruamel] ; extra == 'all'
+  - jsonargparse[ruyaml] ; extra == 'all'
   - jsonargparse[omegaconf] ; extra == 'all'
   - jsonargparse[typing-extensions] ; extra == 'all'
   - jsonargparse[reconplogger] ; extra == 'all'
   - jsonargparse[typing-extensions] ; extra == 'signatures'
-  - docstring-parser>=0.17 ; extra == 'signatures'
-  - typeshed-client>=2.8.2 ; extra == 'signatures'
+  - docstring-parser>=0.15 ; extra == 'signatures'
+  - typeshed-client>=2.1.0 ; extra == 'signatures'
   - jsonschema>=3.2.0 ; extra == 'jsonschema'
-  - jsonnet>=0.21.0 ; extra == 'jsonnet'
+  - jsonnet>=0.13.0 ; python_full_version < '3.13' and os_name == 'posix' and extra == 'jsonnet'
+  - jsonnet-binary>=0.17.0 ; python_full_version < '3.13' and os_name != 'posix' and extra == 'jsonnet'
+  - jsonnet-sdist==2024.6.23 ; python_full_version == '3.13.*' and extra == 'jsonnet'
   - toml>=0.10.2 ; extra == 'toml'
   - requests>=2.18.4 ; extra == 'urls'
   - fsspec>=0.8.4 ; extra == 'fsspec'
   - shtab>=1.7.1 ; extra == 'shtab'
   - argcomplete>=3.5.1 ; extra == 'argcomplete'
-  - ruamel-yaml>=0.18.15 ; extra == 'ruamel'
-  - jsonargparse[ruamel] ; extra == 'ruyaml'
+  - ruyaml>=0.20.0 ; extra == 'ruyaml'
   - omegaconf>=2.1.1 ; extra == 'omegaconf'
   - typing-extensions>=3.10.0.0 ; python_full_version < '3.10' and extra == 'typing-extensions'
   - reconplogger>=4.4.0 ; extra == 'reconplogger'
@@ -1837,13 +1838,13 @@ packages:
   - pre-commit>=2.19.0 ; extra == 'dev'
   - tox>=3.25.0 ; extra == 'dev'
   - build>=0.10.0 ; extra == 'dev'
-  - sphinx>=1.7.9 ; extra == 'doc'
+  - sphinx>=1.7.9,<8.0.0 ; extra == 'doc'
   - sphinx-rtd-theme>=1.2.2 ; extra == 'doc'
   - autodocsumm>=0.1.10 ; extra == 'doc'
   - sphinx-autodoc-typehints>=1.19.5 ; extra == 'doc'
   - bump2version>=0.5.11 ; extra == 'maintainer'
   - twine>=4.0.2 ; extra == 'maintainer'
-  requires_python: '>=3.9'
+  requires_python: '>=3.8'
 - conda: https://prefix.dev/conda-forge/noarch/jupyter_client-8.8.0-pyhcf101f3_0.conda
   sha256: e402bd119720862a33229624ec23645916a7d47f30e1711a4af9e005162b84f3
   md5: 8a3d6d0523f66cf004e563a50d9392b3

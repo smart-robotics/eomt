@@ -8,15 +8,13 @@ requires-pixi = ">=0.62"
 
 [system-requirements]
 linux = "5.4.0"
-# CUDA-specific feature for GPU environment (default)
 cuda="12"
 
 
 [package]
 name = "eomt"
 version = "0.0.1"
-description = "This package contains tooling and utilities to develop and train deep learning models."
-authors = ["dmartins <dmartins@smart-robotics.nl>"]
+description = "Your ViT is Secretly an Image Segmentation Model"
 
 [package.build]
 backend = { name = "pixi-build-python", version = "0.4.*" }
@@ -39,7 +37,6 @@ ipykernel="==6.29.5"
 fvcore="==0.1.5.post20221221"
 torchmetrics="==1.7.1"
 pycocotools="==2.0.8"
-ipython = ">=9.10.0,<10"
 
 [pypi-dependencies]
-jsonargparse = {version = ">=4.27.7", extras = ["signatures"]}
+jsonargparse = {version = "==4.38.*", extras = ["signatures"]}
