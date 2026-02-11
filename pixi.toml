@@ -28,4 +28,4 @@ jsonargparse="==4.40.2"
 typeshed-client="==2.8.2"
 
 [tasks]
-main = "python3 main.py" # add your arguments in front
+main = "python3 main.py"
