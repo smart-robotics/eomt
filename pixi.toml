@@ -24,9 +24,8 @@ ipykernel="==6.29.5"
 fvcore="==0.1.5.post20221221"
 torchmetrics="==1.7.1"
 pycocotools="==2.0.8"
-
-[pypi-dependencies]
-jsonargparse = {version = "==4.38.*", extras = ["signatures"]}
+jsonargparse="==4.40.2"
+typeshed-client="==2.8.2"
 
 [tasks]
 main = "python3 main.py" # add your arguments in front
