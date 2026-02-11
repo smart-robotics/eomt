@@ -1,8 +1,8 @@
 [workspace]
-channels = [
-    "https://prefix.dev/conda-forge"
-    ]
-preview = ["pixi-build"]
+name = "eomt"
+version = "0.0.1"
+description = "Your ViT is Secretly an Image Segmentation Model"
+channels = ["https://prefix.dev/conda-forge"]
 platforms = ["linux-64"]
 requires-pixi = ">=0.62"
 
@@ -11,17 +11,6 @@ linux = "5.4.0"
 cuda="12"
 
 
-[package]
-name = "eomt"
-version = "0.0.1"
-description = "Your ViT is Secretly an Image Segmentation Model"
-
-[package.build]
-backend = { name = "pixi-build-python", version = "0.4.*" }
-
-[package.host-dependencies]
-python_abi = {version="3.13.*", build="*_cp313"}
-hatchling = "*"
 
 [dependencies]
 gitignore-parser="==0.1.12"
