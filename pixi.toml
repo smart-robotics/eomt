@@ -10,8 +10,6 @@ requires-pixi = ">=0.62"
 linux = "5.4.0"
 cuda="12"
 
-
-
 [dependencies]
 gitignore-parser="==0.1.12"
 matplotlib="==3.10.1"
@@ -29,3 +27,6 @@ pycocotools="==2.0.8"
 
 [pypi-dependencies]
 jsonargparse = {version = "==4.38.*", extras = ["signatures"]}
+
+[tasks]
+main = "python3 main.py" # add your arguments in front

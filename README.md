@@ -97,7 +97,7 @@ wget --load-cookies cookies.txt --content-disposition https://www.cityscapes-dat
 To train EoMT from scratch, run:
 
 ```bash
-python3 main.py fit \
+pixi run main fit \
   -c configs/dinov2/coco/panoptic/eomt_large_640.yaml \
   --trainer.devices 4 \
   --data.batch_size 4 \
@@ -128,7 +128,7 @@ To fine-tune a pre-trained EoMT model, add:
 To evaluate a pre-trained EoMT model, run:
 
 ```bash
-python3 main.py validate \
+pixi run main validate \
   -c configs/dinov2/coco/panoptic/eomt_large_640.yaml \
   --model.network.masked_attn_enabled False \
   --trainer.devices 4 \
